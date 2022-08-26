@@ -1,7 +1,9 @@
+
 # Lab 2.6
 import random
-value = random.randint(000,999)
-print(value)
+print(random.randint(0,9))
+print(random.randint(0,9))
+print(random.randint(0,9))
 import random
 value = random.randint(1111,6666)
 print(value)
