@@ -17,7 +17,7 @@ num3=13.5
 print(((num1*20 + num2) * 32 + num3) * 13.3)
 print((str(int(29545.95/1000)) + "kilograms"))
 gram = 29545.95%1000
-print(str(round(gram,4)) +"grams")
+print(str(round(gram,2)) +"grams")
 
 #Lab 2.4
 num1 = 2
