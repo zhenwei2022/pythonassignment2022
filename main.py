@@ -1,16 +1,10 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+#Lab 2.5
+#num1="enter talents"
+#num2="enter prouds"
+#nub3="enter lots"
+num1=3
+num2=9
+num3=13.5
+print(((num1*20 + num2) * 32 + num3) * 13.3)
+print((str(int(29545.95/1000)) + "kilograms"))
+print(str(29545.95 % 1000) + "grams")
