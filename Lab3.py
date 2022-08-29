@@ -16,7 +16,7 @@ elif str.upper(cabin) == "B":
 elif str.upper(cabin) == "C":
     print("windowless cabin below the car deck.")
 else:
-    print("error message! please input invalid cabin class.")
+    print("error message! please input valid cabin class.")
 
 # Lab 3.3
 gender = input(" enter your gender(female/male) : ")
