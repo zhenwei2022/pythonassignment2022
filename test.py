@@ -40,8 +40,8 @@ print((num1 * num2))
 
 # Lab 2.2
 import math
-r = 2
-print((math.pi) * r * r)
+R=int(input("Enter the R : "))
+print((math.pi) * R **R)
 
 # Lab 2.1
 name1 = "Viivi"
@@ -51,3 +51,9 @@ print("Hello," + name2+ "!")
 
 # Lab 1.1
 print("Hello, Wei Zhen!")
+
+
+# Lab 2.2
+import math
+R=input("Enter the R : ")
+print((math.pi) * R **R)
