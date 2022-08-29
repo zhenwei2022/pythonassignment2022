@@ -15,9 +15,8 @@ num1=input("enter talents: ")
 num2=input("enter pounds: ")
 num3=input("enter lots: ")
 result = float(((float(num1)*20 + float(num2)) * 32 + float(num3)) * 13.3)
-print("result")
-print((str(int(29545.95/1000)) + "kilograms"))
-gram = 29545.95%1000
+print((str(int(result)) + "kilograms"))
+gram = int(result)%1000
 print(str(round(gram,2))+"grams")
 
 #Lab 2.4
