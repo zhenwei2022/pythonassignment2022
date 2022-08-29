@@ -1,4 +1,3 @@
-
 # Lab 2.6
 import random
 print(random.randint(0,9))
@@ -46,10 +45,8 @@ r = float(input("enter the value of r: "))
 print((math.pi) * r * r)
 
 # Lab 2.1
-name1 = "Viivi"
-name2 = "Ahmed"
-print("Hello," + name1+ "!")
-print("Hello," + name2+ "!")
+name = input("Enter your name : ")
+print("Hello," + name+ "!")
 
 # Lab 1.1
 name = input("Enter your name : ")
