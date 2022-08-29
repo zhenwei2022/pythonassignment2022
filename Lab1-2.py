@@ -50,4 +50,3 @@ print("Hello," + name+ "!")
 # Lab 1.1
 name = input("Enter your name : ")
 print("Hello," + name + "!")
-
