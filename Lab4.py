@@ -62,6 +62,21 @@ while num >= 5:
         print("Access denied")
     break
 
+Lab4.6
+import random
+import math
+num = 0
+darts = 1000000
+for i in range(1,1000000):
+    x = random.random()
+    y = random.random()
+    r = math.sqrt(x ** 2 + y ** 2)
+    if r <= 1:
+        num = num + 1
+    else:
+        pass
+    pi=4*(num/darts)
+print(pi)
 
 
 
