@@ -1,27 +1,26 @@
 # Lab4.1
 num = 1
-while 3 * num <= 1000:
-    print(3 * (num))
+while num <= 1000:
+    if int(num) % 3 == 0:
+        print(num)
     num = num + 1
 
 # Lab4.2
 inch = float(input("enter inch: "))
 while inch >= 0:
     print(str(2.54 * inch) + "cm")
-    break
+    inch = float(input("enter inch: "))
 while inch < 0:
-    break
+        print("The program ends")
+        break
 
 # Lab 4.3
 mylist=[]
 num= input("Enter number: ")
-mylist.append(num)
 while str(num) != " ":
-    num= input("Enter number: ")
     mylist.append(num)
+    num = input("Enter number: ")
 while str(num) == " ":
-    mylist.remove(" ")
-    mylist = list(map(int,mylist))
     print(min(mylist))
     print(max(mylist))
     break
@@ -31,11 +30,11 @@ import random
 num1 = random.randint(1,10)
 num2 =int(input("enter number: "))
 while num1 > num2:
-        print("Too low")
-        num2 = int(input("enter number: "))
+    print("Too low")
+    num2 = int(input("enter number: "))
 while num1 < num2:
-        print("Too High")
-        num2 = int(input("enter number: "))
+    print("Too High")
+    num2 = int(input("enter number: "))
 while num1 == num2:
         print("correct")
         break
@@ -48,21 +47,21 @@ username2 = input("enter your username: ")
 password2 = input("enter password: ")
 while num <= 4:
     if username1 == username2 and password1 == password2:
-        num = num + 1
         print("Welcome")
-    if username1 != username2 and password1 != password2:
-        num = num + 1
-    username2 = input("enter your username: ")
-    password2 = input("enter password: ")
-while num <= 4:
+        break
     if username1 != username2 or password1 != password2:
         username2 = input("enter your username: ")
-    password2 = input("enter password: ")
-    num = num + 1
-    break
+        password2 = input("enter password: ")
+        num = num + 1
 while num >= 5:
-    print("Access denied")
+    if username1 == username2 and password1 == password2:
+        num = num + 1
+        print("Welcome")
+    if username1 != username2 or password1 != password2:
+        num = num + 1
+        print("Access denied")
     break
+
 
 
 
