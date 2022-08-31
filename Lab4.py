@@ -40,4 +40,29 @@ while num1 == num2:
         print("correct")
         break
 
+#Lab 4.5
+num = 1
+username1 = "python"
+password1 = "rules"
+username2 = input("enter your username: ")
+password2 = input("enter password: ")
+while num <= 4:
+    if username1 == username2 and password1 == password2:
+        num = num + 1
+        print("Welcome")
+    if username1 != username2 and password1 != password2:
+        num = num + 1
+    username2 = input("enter your username: ")
+    password2 = input("enter password: ")
+while num <= 4:
+    if username1 != username2 or password1 != password2:
+        username2 = input("enter your username: ")
+    password2 = input("enter password: ")
+    num = num + 1
+    break
+while num >= 5:
+    print("Access denied")
+    break
+
+
 
