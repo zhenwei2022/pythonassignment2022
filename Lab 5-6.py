@@ -43,7 +43,6 @@ if num >1:
 #Lab 5.4
 list=[]
 city = input(" Enter city name: ")
-round = 0
 for round in range(0,5):
     list.append(city)
     round = round + 1
