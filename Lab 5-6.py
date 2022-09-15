@@ -39,8 +39,9 @@ def conversion():
 conversion()
 
 #Lab 6.4
-def calculation(gallon):
+def calculation(list):
     list = []
+    gallon = input("please enter the quantity of gasoline (gallon): ")
     while gallon != " ":
             liter = int(3.78541178 * int(gallon))
             list.append(liter)
@@ -48,12 +49,49 @@ def calculation(gallon):
     else:
             print(sum(list))
             return
-gallon = input("please enter the quantity of gasoline (gallon): ")
-calculation(gallon)
 
+calculation(list)
 
+#Lab 6.5
+def calculation(list):
+    num = input("please enter the integer: ")
+    while int(num) % 2 == 0:
+        num = input("please enter the integer: ")
+    while int(num) % 2 != 0:
+        list2.remove(num)
+        num = input("please enter the integer: ")
+    if num ==" ":
+        print(list1)
+        print(list2)
+        return
+num = input("please enter the integer: ")
+list1 = []
+list2 = []
+list1.append(num)
+list2.append(num)
+calculation(list)
+print(list1)
+print(list2)
 
-
+Lab 6.6
+def calculation():
+    import math
+    area1 = math.pi * (diameter1 / 200) *(diameter1 / 200)
+    area2 = math.pi * (diameter2 / 200) * (diameter2 / 200)
+    pizza1 = price1 / area1
+    pizza2  = price2 / area2
+    print(pizza1)
+    print(pizza2)
+    if pizza1 < pizza2:
+        print("pizza1 is better value")
+    else:
+        print("pizza2 is better value")
+        return
+diameter1 = int(input("please enter the diamter1: "))
+price1 = int(input("please enter the price1: "))
+diameter2 = int(input("please enter the diamter2: "))
+price2 = int(input("please enter the price2: "))
+calculation()
 
 
 #Lab 5.1
