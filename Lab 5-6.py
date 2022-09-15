@@ -1,5 +1,5 @@
+#Lab 5-6
 #Lab 6.1
-#Lab 6
 def dice():
     import random
     list = []

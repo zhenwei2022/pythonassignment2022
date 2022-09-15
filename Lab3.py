@@ -39,7 +39,7 @@ year = input(" enter the year: ")
 if int(year) % 4 != 0:
     print(" It is not leap year.")
 elif int(year) % 4 == 0 and int(year) % 100 != 0:
-    print(" It is leap year.")
+    print(" It is leap  year.")
 elif int(year) % 4 == 0 and int(year) % 100 == 0 and int(year) % 400 == 0:
     print(" It is leap year.")
 else:
