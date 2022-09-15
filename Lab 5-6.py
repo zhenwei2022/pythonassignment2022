@@ -1,4 +1,61 @@
-#Lab 5-6
+#Lab 6.1
+#Lab 6
+def dice():
+    import random
+    list = []
+    num = random.randint(1, 6)
+    while num< 6:
+        list.append(num)
+        num = random.randint(1, 6)
+    else:
+        print(list)
+        return
+dice()
+
+Lab 6.2
+def dice(max):
+    import random
+    list = []
+    num = random.randint(1, 21)
+    while num< max:
+        list.append(num)
+        num = random.randint(1, 21)
+    else:
+        print(list)
+        return
+max = int(input("please enter the maximum number: "))
+dice(max)
+
+#Lab 6.3
+def conversion():
+    gallon = input("please enter the quantity of gasoline (gallon): ")
+    while gallon != " ":
+        liter = 3.78541178 * int(gallon)
+        print(liter)
+        gallon = input("please enter the quantity of gasoline (gallon): ")
+    else:
+        print("execution stopped")
+        return
+conversion()
+
+#Lab 6.4
+def calculation(gallon):
+    list = []
+    while gallon != " ":
+            liter = int(3.78541178 * int(gallon))
+            list.append(liter)
+            gallon = input("please enter the quantity of gasoline (gallon): ")
+    else:
+            print(sum(list))
+            return
+gallon = input("please enter the quantity of gasoline (gallon): ")
+calculation(gallon)
+
+
+
+
+
+
 #Lab 5.1
 import random
 import math
