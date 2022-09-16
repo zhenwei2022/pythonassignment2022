@@ -53,25 +53,12 @@ def calculation(list):
 calculation(list)
 
 #Lab 6.5
-def calculation(list):
-    num = input("please enter the integer: ")
-    while int(num) % 2 == 0:
-        num = input("please enter the integer: ")
-    while int(num) % 2 != 0:
-        list2.remove(num)
-        num = input("please enter the integer: ")
-    if num ==" ":
-        print(list1)
-        print(list2)
-        return
-num = input("please enter the integer: ")
-list1 = []
-list2 = []
-list1.append(num)
-list2.append(num)
-calculation(list)
-print(list1)
-print(list2)
+def my_function(fetch):
+    list2 = list(filter(lambda num: num % 2 == 0, list1))
+    print(list1)
+    print(list2)
+list1 =[99987,1567,22,2745,23463,1666,1350]
+my_function(list1)
 
 Lab 6.6
 def calculation():
@@ -87,10 +74,8 @@ def calculation():
     else:
         print("pizza2 is better value")
         return
-diameter1 = int(input("please enter the diamter1: "))
-price1 = int(input("please enter the price1: "))
-diameter2 = int(input("please enter the diamter2: "))
-price2 = int(input("please enter the price2: "))
+pizza1 = int(input("please enter the diamter1:  and price  "))
+
 calculation()
 
 
