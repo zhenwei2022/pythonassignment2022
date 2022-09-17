@@ -12,7 +12,7 @@ def dice():
         return
 dice()
 
-Lab 6.2
+#Lab 6.2
 def dice(max):
     import random
     list = []
@@ -67,7 +67,7 @@ for i in range(0, num):
         list1.append(ele)
 my_function(list1)
 
-Lab 6.6
+#Lab 6.6
 def calculation():
     import math
     area1 = math.pi * (diameter1 / 200) *(diameter1 / 200)
