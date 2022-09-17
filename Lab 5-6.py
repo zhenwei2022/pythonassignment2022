@@ -39,25 +39,32 @@ def conversion():
 conversion()
 
 #Lab 6.4
-def calculation(list):
-    list = []
-    gallon = input("please enter the quantity of gasoline (gallon): ")
-    while gallon != " ":
-            liter = int(3.78541178 * int(gallon))
-            list.append(liter)
-            gallon = input("please enter the quantity of gasoline (gallon): ")
-    else:
-            print(sum(list))
-            return
-
-calculation(list)
+def my_function(caltulation):
+    list2 = []
+    for i in range(0, num):
+        ele = int(input())
+        list1.append(ele)
+        liter = int(3.78541178 * ele)
+        list2.append(liter)
+        print(list1)
+        print(list2)
+        print(sum(list2))
+    return
+list1 = []
+num = int(input("Enter number of elements:"))
+my_function(list1)
 
 #Lab 6.5
 def my_function(fetch):
-    list2 = list(filter(lambda num: num % 2 == 0, list1))
+    list2 = list(filter(lambda num: num % 2 == 0,list1))
     print(list1)
     print(list2)
-list1 =[99987,1567,22,2745,23463,1666,1350]
+    return
+list1 = []
+num = int(input("Enter number of elements:"))
+for i in range(0, num):
+        ele = int(input())
+        list1.append(ele)
 my_function(list1)
 
 Lab 6.6
