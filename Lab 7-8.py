@@ -19,3 +19,20 @@ while enter_name != " ":
 while enter_name ==" ":
     print(my_set)
     break
+
+#Lab 7.3
+x = {}
+information = str.upper(input("Would you like to enter a new airport,fetch information or quit:"))
+while information == str.upper("enter a new airport"):
+    enter_ICAO = str.upper(input(" Enter the ICAO code : "))
+    enter_name = str.upper(input(" Enter the name of airport : "))
+    x[enter_ICAO] = enter_name
+    print(x)
+    information = str.upper(input("Would you like to enter a new airport,fetch information or quit:"))
+while information == str.upper("fetch information"):
+    fetch_ICAO = str.upper(input(" Enter the ICAO code : "))
+    print(x[fetch_ICAO])
+    information = str.upper(input("Would you like to enter a new airport,fetch information or quit:"))
+while information == str.upper("quit"):
+        print("Program execution ends")
+        break
