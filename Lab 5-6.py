@@ -67,24 +67,33 @@ for i in range(0, num):
         list1.append(ele)
 my_function(list1)
 
-#Lab 6.6
-def calculation():
-    import math
-    area1 = math.pi * (diameter1 / 200) *(diameter1 / 200)
-    area2 = math.pi * (diameter2 / 200) * (diameter2 / 200)
-    pizza1 = price1 / area1
-    pizza2  = price2 / area2
-    print(pizza1)
-    print(pizza2)
-    if pizza1 < pizza2:
-        print("pizza1 is better value")
-    else:
-        print("pizza2 is better value")
-        return
-pizza1 = int(input("please enter the diamter1:  and price  "))
+# Lab 6.6
+def calculation(a,b):
 
-calculation()
+        list = []
+        import math
+        area = math.pi * (a / 200) * (a / 200)
+        result = (b / area)
+        list.append(result)
+        print(list)
+        a = int(input("please enter the diameter of pizza: "))
+        b = int(input("please enter the price of pizza: "))
+        area = math.pi * (a / 200) * (a / 200)
+        result = (b / area)
+        list.append(result)
+        print(list)
+        print(list[0])
 
+        if list[0] < list[1]:
+            print(" The first pizza is value for money")
+        elif list[0] > list[1]:
+            print(" The first pizza is value for money")
+        else:
+            print(" They are same value for money")
+
+diameter = int(input("please enter the diameter of pizza: "))
+price = int(input("please enter the price of pizza: "))
+calculation(diameter,price)
 
 #Lab 5.1
 import random
