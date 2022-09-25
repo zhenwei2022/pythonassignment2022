@@ -1,5 +1,5 @@
+#Lab 5-6
 #Lab 6.1
-#Lab 6
 def dice():
     import random
     list = []
@@ -12,7 +12,7 @@ def dice():
         return
 dice()
 
-Lab 6.2
+#Lab 6.2
 def dice(max):
     import random
     list = []
@@ -39,22 +39,61 @@ def conversion():
 conversion()
 
 #Lab 6.4
-def calculation(gallon):
-    list = []
-    while gallon != " ":
-            liter = int(3.78541178 * int(gallon))
-            list.append(liter)
-            gallon = input("please enter the quantity of gasoline (gallon): ")
-    else:
-            print(sum(list))
-            return
-gallon = input("please enter the quantity of gasoline (gallon): ")
-calculation(gallon)
+def my_function(caltulation):
+    list2 = []
+    for i in range(0, num):
+        ele = int(input())
+        list1.append(ele)
+        liter = int(3.78541178 * ele)
+        list2.append(liter)
+        print(list1)
+        print(list2)
+        print(sum(list2))
+    return
+list1 = []
+num = int(input("Enter number of elements:"))
+my_function(list1)
 
+#Lab 6.5
+def my_function(fetch):
+    list2 = list(filter(lambda num: num % 2 == 0,list1))
+    print(list1)
+    print(list2)
+    return
+list1 = []
+num = int(input("Enter number of elements:"))
+for i in range(0, num):
+        ele = int(input())
+        list1.append(ele)
+my_function(list1)
 
+# Lab 6.6
+def calculation(a,b):
 
+        list = []
+        import math
+        area = math.pi * (a / 200) * (a / 200)
+        result = (b / area)
+        list.append(result)
+        print(list)
+        a = int(input("please enter the diameter of pizza: "))
+        b = int(input("please enter the price of pizza: "))
+        area = math.pi * (a / 200) * (a / 200)
+        result = (b / area)
+        list.append(result)
+        print(list)
+        print(list[0])
 
+        if list[0] < list[1]:
+            print(" The first pizza is value for money")
+        elif list[0] > list[1]:
+            print(" The first pizza is value for money")
+        else:
+            print(" They are same value for money")
 
+diameter = int(input("please enter the diameter of pizza: "))
+price = int(input("please enter the price of pizza: "))
+calculation(diameter,price)
 
 #Lab 5.1
 import random
@@ -106,3 +145,4 @@ for round in range(0,5):
     city = input(" Enter city name: ")
 for items in list:
         print(items)
+
