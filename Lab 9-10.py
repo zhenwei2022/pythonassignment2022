@@ -15,6 +15,7 @@ class Car:
         self.registration_number=registration_number
         self.maximum_speed="'{}'km/h".format(maximum_speed)
         self.current_speed=0
+        self.travelled_distance = 0
     def accelerate(self, accelerate_speed):
         self.current_speed = self.current_speed + accelerate_speed
         if self.current_speed >= 142:
@@ -30,6 +31,7 @@ class Car:
         self.registration_number=registration_number
         self.maximum_speed="'{}'km/h".format(maximum_speed)
         self.current_speed=30
+        self.travelled_distance = 0
     def accelerate(self, accelerate_speed):
         self.current_speed = self.current_speed + accelerate_speed
         if self.current_speed >= 142:
@@ -45,6 +47,7 @@ class Car:
         self.registration_number=registration_number
         self.maximum_speed="'{}'km/h".format(maximum_speed)
         self.current_speed=100
+        self.travelled_distance = 0
     def accelerate(self, accelerate_speed):
         self.current_speed = self.current_speed + accelerate_speed
         if self.current_speed >= 142:
@@ -60,6 +63,7 @@ class Car:
         self.registration_number=registration_number
         self.maximum_speed="'{}'km/h".format(maximum_speed)
         self.current_speed=100
+        self.travelled_distance = 0
     def accelerate(self, accelerate_speed):
         self.current_speed = self.current_speed + accelerate_speed
         if self.current_speed >= 142:
