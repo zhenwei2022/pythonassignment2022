@@ -74,3 +74,17 @@ class Car:
 car4 = Car("ABC-123", 142)
 car4.accelerate(-200)
 print(vars(car4))
+
+# 3.
+class Car:
+    def __init__(self, registration_number, maximum_speed, current_speed=60, travelled_distance=2000):
+        self.registration_number=registration_number
+        self.maximum_speed="'{}'km/h".format(maximum_speed)
+        self.current_speed= 60
+        self.travelled_distance = 2000
+    def drive(self,travelled_distance):
+        self.travelled_distance = self.travelled_distance + 1.5 * self.current_speed
+car1 = Car("ABC-123", 142)
+car1.drive(1.5)
+print(vars(car1))
+
