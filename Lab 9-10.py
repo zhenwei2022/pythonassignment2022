@@ -83,3 +83,33 @@ else:
     print(circle)
     print((distance_list))
 
+#Lab 10
+#1
+class Elevator:
+    def __init__(self, bottom_floor, top_floor):
+        self.bottom_floor= bottom_floor
+        self.top_floor = top_floor
+    def go_to_floor(self, destination_floor):
+        self.destination_floor = destination_floor
+    def floor_up(self, up_floors_number):
+        self.up_floors_number = present_floor + up_floors_number
+    def floor_down(self, down_floors_number):
+        self.down_floors_number = present_floor + down_floors_number
+
+elevator = Elevator(0,10)
+elevator.go_to_floor(5)
+move_floors = elevator.destination_floor - elevator.bottom_floor
+present_floor = elevator.bottom_floor
+while present_floor < elevator.destination_floor:
+    print("You are in the {} floor.".format(present_floor)+"Next floor is {} floor".format(present_floor +1))
+    elevator.floor_up(1)
+    present_floor = present_floor + 1
+if present_floor == elevator.destination_floor:
+    print("You are in the {} floor.".format(present_floor) + "The elevator will go back to the bottom floor.")
+while present_floor > elevator.bottom_floor:
+        print("You are in the {} floor.".format(present_floor)+"Next floor is {} floor".format(present_floor -1))
+        elevator.floor_down(-1)
+        present_floor = present_floor - 1
+if present_floor == elevator.bottom_floor:
+    print("You are in the {} floor.".format(present_floor) + "It is bottom floor.")
+
