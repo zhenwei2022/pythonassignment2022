@@ -76,9 +76,8 @@ while i <= 10:
         car.drive(1)
         distance_list = []
         distance_list.append(car.travelled_distance)
-    else:
+    if car.travelled_distance >= 10000:
         print(vars(car))
-        print(distance_list)
 #Lab 10
 #1
 class Elevator:
