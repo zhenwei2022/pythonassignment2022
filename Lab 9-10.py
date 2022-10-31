@@ -8,7 +8,6 @@ class Car:
         self.travelled_distance= travelled_distance
 car = Car("ABC-123", 142, 0, 0)
 print(vars(car))
-
 # 2.
 class Car:
     def __init__(self, registration_number, maximum_speed, current_speed, travelled_distance=0):
@@ -32,7 +31,6 @@ car.accelerate(50)
 print(vars(car))
 car.accelerate(-200)
 print(vars(car))
-
 # 3.
 class Car:
     def __init__(self, registration_number, maximum_speed, current_speed, travelled_distance):
