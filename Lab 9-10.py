@@ -43,7 +43,6 @@ class Car:
 car1 = Car("ABC-123", 142, 60, 2000)
 car1.drive(1.5)
 print(vars(car1))
-
 # 4.
 import random
 class Car:
@@ -60,12 +59,12 @@ class Car:
             self.current_speed = 100
         else: self.current_speed == self.current_speed
     def drive(self, drive_hour):
-        self.travelled_distance = self.travelled_distance + drive_hour * self.current_speed
         if self.current_speed >= 200:
            travelled_distance = 200
         elif self.current_speed <= 100:
             travelled_distance = 100
         else: self.travelled_distance= self.travelled_distance
+        self.travelled_distance = self.travelled_distance + drive_hour * self.current_speed
 i = 1
 while i <= 10:
     car = Car("ABC-{}".format(i),200, random.randint(100, 200), 0)
@@ -80,7 +79,6 @@ while i <= 10:
     else:
         print(vars(car))
         print(distance_list)
-
 #Lab 10
 #1
 class Elevator:
