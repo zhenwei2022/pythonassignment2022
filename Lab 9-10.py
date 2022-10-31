@@ -71,7 +71,7 @@ while i <= 10:
     i = i + 1
     car.accelerate(random.randint(-10, 15))
     car.drive(1)
-    while car.travelled_distance <= 10000:
+    while car.travelled_distance < 10000:
         car.accelerate(random.randint(-10, 15))
         car.drive(1)
         distance_list = []
