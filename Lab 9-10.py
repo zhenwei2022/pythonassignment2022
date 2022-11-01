@@ -122,21 +122,45 @@ class Building:
         self.top_floor = top_floor
         self.elevator_number = elevator_number
         self.elevator_list = []
-        for i in range(1, elevator_number + 1):
+        i = 1
+        while i <= elevator_number:
             self.elevator_list.append("elevator{}".format(i))
+            i = i + 1
     def run_elevator(self, elevator_number, destination_floor):
         self.elevator_number = elevator_number
         self.destination_floor = destination_floor
-h = Elevator(0,10)
 building = Building(0,10,3)
-building.run_elevator(5,8)
-present_floor = h.bottom_floor
-while present_floor < building.destination_floor:
-    h.floor_up()
-    present_floor = present_floor + 1
-if present_floor == building.destination_floor:
-    print("You are in the {} floor.".format(present_floor) )
+building.run_elevator(3,8)
 print(vars(building))
-
+#3
+class Elevator:
+    def __init__(self, bottom_floor, top_floor):
+        self.bottom_floor= bottom_floor
+        self.top_floor = top_floor
+    def go_to_floor(self, destination_floor):
+        self.destination_floor = destination_floor
+    def floor_up(self):
+        self.up_floors_number = present_floor + 1
+    def floor_down(self):
+        self.down_floors_number = present_floor -1
+class Building:
+    def __init__(self, bottom_floor, top_floor, elevator_number):
+        self.bottom_floor = bottom_floor
+        self.top_floor = top_floor
+        self.elevator_number = elevator_number
+        self.elevator_list = []
+        i = 1
+        while i <= elevator_number:
+            self.elevator_list.append("elevator{}".format(i))
+            i = i + 1
+    def run_elevator(self, elevator_number, destination_floor):
+        self.elevator_number = elevator_number
+        self.destination_floor = destination_floor
+    def fire_alarm(self):
+        self.destination_floor = self.bottom_floor
+building = Building(0,10,3)
+building.run_elevator(3,8)
+building.fire_alarm()
+print(vars(building))
 
 
