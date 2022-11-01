@@ -67,7 +67,7 @@ while finish == False:
         new_car.drive(1)
         if new_car.travelled_distance > 10000:
             finish = True
-        print(vars(new_car))
+        print(f"registration_number ABC-{new_car.registration_number},maximum_speed: {new_car.maximum_speed}, current_speed:{new_car.current_speed}, travelled_distance:{new_car.travelled_distance}")
 
 #Lab 10
 #1
@@ -121,18 +121,21 @@ class Building:
         i = 1
         for i in range(1,elevators + 1):
             elevator.go_to_floor(destination_floor)
+            print("elevator{}".format(i))
             print(vars(elevator))
             i = i + 1
     def fire_alarm(self):
         i = 1
         for i in range(1, building.elevators + 1):
             elevator.go_to_floor(elevator.bottom_floor)
+            print("elevator{}".format(i))
             print(vars(elevator))
             i = i + 1
 elevator = Elevator(0,10)
 building = Building(0,10,3)
 building.run_elevator(3,9)
 building.fire_alarm()
+#4
 import random
 class Car:
     def __init__(self, registration_number, maximum_speed, current_speed, travelled_distance):
@@ -173,7 +176,7 @@ for i in range(1,11):
     if maximum_speed < current_speed:
         current_speed = maximum_speed
     else:
-        cureecurrent_speed = current_speed
+        current_speed = current_speed
     new_car = Car(registration_number, maximum_speed, current_speed, 0)
     car_list.append(new_car)
     registration_number = registration_number + 1
