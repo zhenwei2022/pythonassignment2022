@@ -86,26 +86,24 @@ class Elevator:
         self.top_floor = top_floor
     def go_to_floor(self, destination_floor):
         self.destination_floor = destination_floor
-    def floor_up(self, up_floors_number):
-        self.up_floors_number = present_floor + up_floors_number
-    def floor_down(self, down_floors_number):
-        self.down_floors_number = present_floor + down_floors_number
-
-elevator = Elevator(0,10)
-elevator.go_to_floor(5)
-move_floors = elevator.destination_floor - elevator.bottom_floor
-present_floor = elevator.bottom_floor
-while present_floor < elevator.destination_floor:
-    print("You are in the {} floor.".format(present_floor)+"Next floor is {} floor".format(present_floor +1))
-    elevator.floor_up(1)
+    def floor_up(self):
+        self.up_floors_number = present_floor + 1
+        print("You are in the {} floor.".format(present_floor) + "Next floor is {} floor".format(present_floor + 1))
+    def floor_down(self):
+        self.down_floors_number = present_floor -1
+        print("You are in the {} floor.".format(present_floor) + "Next floor is {} floor".format(present_floor - 1))
+h = Elevator(0,10)
+h.go_to_floor(5)
+present_floor = h.bottom_floor
+while present_floor < h.destination_floor:
+    h.floor_up()
     present_floor = present_floor + 1
-if present_floor == elevator.destination_floor:
+if present_floor == h.destination_floor:
     print("You are in the {} floor.".format(present_floor) + "The elevator will go back to the bottom floor.")
-while present_floor > elevator.bottom_floor:
-        print("You are in the {} floor.".format(present_floor)+"Next floor is {} floor".format(present_floor -1))
-        elevator.floor_down(-1)
-        present_floor = present_floor - 1
-if present_floor == elevator.bottom_floor:
+while present_floor > h.bottom_floor:
+    h.floor_down()
+    present_floor = present_floor - 1
+if present_floor == h.bottom_floor:
     print("You are in the {} floor.".format(present_floor) + "It is bottom floor.")
 #2
 class Elevator:
@@ -114,20 +112,31 @@ class Elevator:
         self.top_floor = top_floor
     def go_to_floor(self, destination_floor):
         self.destination_floor = destination_floor
-    def floor_up(self, up_floors_number):
-        self.up_floors_number = present_floor + up_floors_number
-    def floor_down(self, down_floors_number):
-        self.down_floors_number = present_floor + down_floors_number
+    def floor_up(self):
+        self.up_floors_number = present_floor + 1
+    def floor_down(self):
+        self.down_floors_number = present_floor -1
 class Building:
     def __init__(self, bottom_floor, top_floor, elevator_number):
         self.bottom_floor = bottom_floor
         self.top_floor = top_floor
         self.elevator_number = elevator_number
+        self.elevator_list = []
+        for i in range(1, elevator_number + 1):
+            self.elevator_list.append("elevator{}".format(i))
     def run_elevator(self, elevator_number, destination_floor):
         self.elevator_number = elevator_number
         self.destination_floor = destination_floor
-building = Building(0,10,5)
-building.run_elevator(5,10)
+h = Elevator(0,10)
+building = Building(0,10,3)
+building.run_elevator(5,8)
+present_floor = h.bottom_floor
+while present_floor < building.destination_floor:
+    h.floor_up()
+    present_floor = present_floor + 1
+if present_floor == building.destination_floor:
+    print("You are in the {} floor.".format(present_floor) )
 print(vars(building))
+
 
 
