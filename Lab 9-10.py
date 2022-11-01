@@ -133,56 +133,56 @@ elevator = Elevator(0,10)
 building = Building(0,10,3)
 building.run_elevator(3,9)
 building.fire_alarm()
-# 4.
 import random
 class Car:
     def __init__(self, registration_number, maximum_speed, current_speed, travelled_distance):
-        self.registration_number= registration_number
-        self.maximum_speed="'{}'km/h".format(maximum_speed)
+        self.registration_number=registration_number
+        self.maximum_speed= maximum_speed
         self.current_speed= current_speed
         self.travelled_distance = travelled_distance
     def accelerate(self, accelerate_speed):
         self.current_speed = self.current_speed + accelerate_speed
-        if self.current_speed >= 200:
-           self.current_speed = 200
-        elif self.current_speed <= 100:
-            self.current_speed = 100
-        else: self.current_speed == self.current_speed
+        if self.current_speed > maximum_speed:
+           self.current_speed = maximum_speed
     def drive(self, drive_hour):
-        if self.current_speed >= 200:
-           travelled_distance = 200
-        elif self.current_speed <= 100:
-            travelled_distance = 100
-        else: self.travelled_distance= self.travelled_distance
-        self.travelled_distance = self.travelled_distance + drive_hour * self.current_speed
+       self.travelled_distance = self.travelled_distance + drive_hour * self.current_speed
 
 class Race:
-    def __init__(self, name, travelled_distance, car_list):
+    def __init__(self, name, race_distance, car_amount):
         self.name = name
-        self.travelled_distance = travelled_distance
-        self.car_list = car_list
+        self.race = race_distance
+        self.car_amount = car_amount
     def hour_passes(self):
-        self.hour_passes = car.drive(1)
+        for car in car_list:
+            car.accelerate(random.randint(-10,16))
+            car.drive(1)
+            print(vars(car))
     def print_status(self):
-        distance_list = []
-        distance_list.append(race.travelled_distance)
-        print(Race.car_list)
-    def race_finished(self,race_distance):
-        self.race_distance = race_distance
-        self.race_finished = race.travelled_distance >= race_distance
-race= Race("Grand_Demolition_Derby",0,0)
-race_distance = 8000
-i = 1
-while i <= 10:
-    car = Car("ABC-{}".format(i),200, random.randint(100, 200), 0)
-    i = i + 1
-    car_list= []
-    car_list.append(car)
-    car.accelerate(random.randint(-10, 15))
-    race.hour_passed()
-    if race_finished == False:
-        race.hour_passed()
-    if race_finished == True:
-        race.print_status()
+        for car in self.car_list:
+            print(vars(self.car_list[i]))
+    def race_finished(self):
+        for i in range(len(self.car_list)):
+            if car.travlled_distance >= self.race_distance:
+                return Ture
+race= Race("Grand_Demolition_Derby", 8000 , 10)
+car_list = []
+registration_number = 1
+for i in range(1,11):
+    maximum_speed = random.randint(100,200)
+    current_speed = random.randint(100,200)
+    if maximum_speed < current_speed:
+        current_speed = maximum_speed
+    else:
+        cureecurrent_speed = current_speed
+    new_car = Car(registration_number, maximum_speed, current_speed, 0)
+    car_list.append(new_car)
+    registration_number = registration_number + 1
 
+finish = False
+while finish == False:
+    for new_car in car_list:
+        new_car.accelerate(random.randint(-10, 16))
+        new_car.drive(1)
+        if race_finished == True:
+            print(vars(new_car))
 
