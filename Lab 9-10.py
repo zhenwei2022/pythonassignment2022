@@ -169,7 +169,7 @@ class Race:
             car.drive(change_speed)
     def print_status(self):
         for car in self.car_list:
-            print(f"registration_number:{car.registration_number}, current_speed:{car.current_speed} kilometers/hour, travelled_distance:{car.travelled_distance}")
+            print(f"registration_number:{car.registration_number}, current_speed:{car.current_speed} kilometers/hour, travelled_distance:{car.travelled_distance} kilometers")
 
     def race_finished(self):
         race_over = False
