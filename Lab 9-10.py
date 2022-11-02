@@ -187,8 +187,6 @@ for i in range(1,11):
     car_list.append(new_car)
     registration_number = registration_number + 1
 race = Race("Grand Demolition Derby", 8000, car_list)
-race_over = False
-hour = 1
 progress = False
 hour = 1
 while progress == False:
@@ -197,8 +195,6 @@ while progress == False:
     race.print_status()
     hour = hour + 1
     print(f"Time takes {hour} hours.")
-
 print("Race over!!! The final result as following.")
 race.print_status()
-
 
