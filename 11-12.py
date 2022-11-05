@@ -78,5 +78,5 @@ if response.status_code==200:
     wind_speed = json_response["wind"]["speed"]
     temp_C = temp_K - 273.15
     temp_C_print = round(temp_C,2)
-    print(f"{Enter_municipality} is {description}. The temperature is {temp_C_print}ºC. wind speed: {wind_speed}")
+    print(f"{Enter_municipality} is {description}. The temperature is {temp_C_print}ºC. Wind speed is {wind_speed}m/s.")
 
