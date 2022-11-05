@@ -27,7 +27,32 @@ publication.append(Magazine("Donald Duck", "Aki Hyyppä"))
 for i in publication:
     i.print_information()
 #11.2
+class Car:
+    def __init__(self, registration_number, maximum_speed):
+        self.registration_number = registration_number
+        self.maximum_speed = maximum_speed
 
+
+class ElectricCar(Car):
+    def __init__(self, registration_number, maximum_speed, capacity_battery):
+        self.capacity_battery = capacity_battery
+        super().__init__(registration_number, maximum_speed)
+        Ecar_distance = hour * self.maximum_speed
+        print(f"The distance of electric car is {Ecar_distance} kilometers")
+
+
+class GasolineCar(Car):
+    def __init__(self, registration_number, maximum_speed, volume_tank):
+        self.volume_tank = volume_tank
+        super().__init__(registration_number, maximum_speed)
+        Gcar_distance = hour * self.maximum_speed
+        print(f"The distance of gasoline car is {Gcar_distance} kilometers.")
+
+
+hour = 3
+car_list = []
+car_list.append(ElectricCar("ABC-15", 180, 52.5))
+car_list.append(GasolineCar("ACD-123", 165, 32.3))
 
 #12.1
 import requests
