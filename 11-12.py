@@ -63,11 +63,20 @@ print("The joke as following.")
 print(response["value"])
 
 #12.2
+import json
 import requests
 
-city_information = input("Enter municipality name: ")
-country_information = input("Enter country name: ")
-request = "api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=f8d1968db6a83d9aceb39e0711a32dbb"
-response = requests.get(request).json()
-print(response)
+Enter_municipality = input("Enter the name of municipality: ")
+request = ("http://api.openweathermap.org/data/2.5/weather?q=" +Enter_municipality + "&APPID=f8d1968db6a83d9aceb39e0711a32dbb")
+response = requests.get(request)
+if response.status_code==200:
+    json_response = response.json()
+    weather = json_response["weather"][0]
+    description = weather["main"]
+    temp_K = json_response["main"]["temp"]
+    wind = json_response["wind"]
+    wind_speed = json_response["wind"]["speed"]
+    temp_C = temp_K - 273.15
+    temp_C_print = round(temp_C,2)
+    print(f"{Enter_municipality} is {description}. The temperature is {temp_C_print}ºC. wind speed: {wind_speed}")
 
