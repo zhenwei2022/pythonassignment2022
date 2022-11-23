@@ -5,27 +5,27 @@ class Publication:
         self.name = name
 
 class Book(Publication):
-    def __init__(self, name, author, page_count):
+    def __init__(self, name, author, page_count ):
         self.author = author
         self.page_count = page_count
         super().__init__(name)
 
     def print_information(self):
-        print(f"The book name is {self.name}. The author is {self.author}. The book has {self.page_count} pages.")
+        print(f"The author of {self.name} is {self.author}. It has {self.page_count} pages.")
 
 class Magazine(Publication):
-    def __init__(self, name, chief_editor):
+    def __init__(self,name, chief_editor):
         self.chief_editor = chief_editor
         super().__init__(name)
 
     def print_information(self):
-        print(f"The chief editor of magazine is {self.chief_editor}.")
+        print(f"The chief editor of {self.name} is {self.chief_editor}.")
 
-publication= []
-publication.append(Book("Compartment NO.6", "Rosa Likson", 192))
-publication.append(Magazine("Donald Duck", "Aki Hyyppä"))
-for i in publication:
-    i.print_information()
+book = Book("Compartment No.6", "Rosa Likson", 192)
+magazine = Magazine("Donald Duck","Aki Hyppä")
+book.print_information()
+magazine.print_information()
+
 #11.2
 class Car:
     def __init__(self, registration_number, maximum_speed):
