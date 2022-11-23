@@ -56,11 +56,10 @@ car_list.append(GasolineCar("ACD-123", 165, 32.3))
 
 #12.1
 import requests
-
 request = "https://api.chucknorris.io/jokes/random"
 response = requests.get(request).json()
-print("The joke as following.")
 print(response["value"])
+print(f"The joke as following: {response['value']}.")
 
 #12.2
 import json
