@@ -47,9 +47,8 @@ class GasolineCar(Car):
         print(f"The distance of gasoline car is {Gcar_distance} kilometers.")
 
 hour = 3
-car_list = []
-car_list.append(ElectricCar("ABC-15", 180, 52.5))
-car_list.append(GasolineCar("ACD-123", 165, 32.3))
+electricar = ElectricCar("ABC-15", 180, 52.5)
+gasolinecar = GasolineCar("ACD-123", 165, 32.3)
 
 #12.1
 import requests
