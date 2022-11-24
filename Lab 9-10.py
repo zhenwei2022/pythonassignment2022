@@ -1,5 +1,5 @@
 # Lab 9
-# 1 & 2
+# 1 & 2 & 3
 class Car:
     def __init__(self, registration_number, maximum_speed, current_speed, travelled_distance):
         self.registration_number=registration_number
@@ -8,66 +8,72 @@ class Car:
         self.travelled_distance= travelled_distance
 
     def accelerate(self, accelerate_speed):
-        self.current_speed = self.current_speed + accelerate_speed
+        self.current_speed = self.maximum_speed + accelerate_speed
         if self.current_speed > self.maximum_speed:
                 self.current_speed = self.maximum_speed
         elif self.current_speed < 0:
                 self.current_speed = 0
-        else: self.current_speed == self.current_speed
+        else: self.current_speed == self.maximum_speed
 
-car = Car("ABC-123", 142, 0, 0)
-print(vars(car))
-car.accelerate(30)
-car.accelerate(70)
-car.accelerate(50)
-print(vars(car))
-car.accelerate(-200)
-print(vars(car))
+    def drive(self, drive_hour):
+            self.travelled_distance = self.travelled_distance + drive_hour * self.current_speed
 
-# 3.
-class Car:
-    def __init__(self, registration_number, maximum_speed, current_speed, travelled_distance):
-        self.registration_number= registration_number
-        self.maximum_speed= maximum_speed
-        self.current_speed= current_speed
-        self.travelled_distance = travelled_distance
-    def drive(self,drive_hour):
-        self.travelled_distance = self.travelled_distance + drive_hour * self.current_speed
-car = Car("ABC-123", 142, 60, 2000)
-car.drive(1.5)
-print(vars(car))
+car = Car("ABC-123", 142, 0, 0)         #1
+print(vars(car))                        #1
+
+car.accelerate(30)                      #2
+car.accelerate(70)                      #2
+car.accelerate(50)                      #2
+print(vars(car))                        #2
+car.accelerate(-200)                    #2
+print(vars(car))                        #2
+
+car = Car("ABC-123", 142, 60, 2000)     #3
+car.drive(1.5)                          #3
+print(vars(car))                        #3
 
 # 4.
 import random
 class Car:
-    def __init__(self, registration_number, maximum_speed, current_speed, travelled_distance):
-        self.registration_number=registration_number
-        self.maximum_speed= maximum_speed
-        self.current_speed= current_speed
+    def __init__(self, registration_number, maximum_speed, travelled_distance):
+        self.registration_number = registration_number
+        self.maximum_speed = maximum_speed
         self.travelled_distance = travelled_distance
+
     def accelerate(self, accelerate_speed):
-        self.current_speed = self.current_speed + accelerate_speed
-        if self.current_speed > maximum_speed:
-           self.current_speed = maximum_speed
+        self.accelerate_speed = accelerate_speed
+        self.current_speed = self.maximum_speed + self. accelerate_speed
+        if self.current_speed > 200:
+            self.current_speed =200
+        elif self.current_speed < 100:
+            self.current_speed = 100
+        else:
+            self.current_speed = self.current_speed
+        return self.current_speed
+
     def drive(self, drive_hour):
-       self.travelled_distance = self.travelled_distance + drive_hour * self.current_speed
+        self.travelled_distance += self.current_speed
+        return self.travelled_distance
+
 car_list = []
-registration_number = 1
-for i in range(1,11):
-    maximum_speed = random.randint(100, 200)
-    current_speed = random.randint(100, 200)
-    new_car = Car(registration_number, maximum_speed, current_speed, 0)
-    car_list.append(new_car)
-    registration_number = registration_number + 1
 travelled_distance = 0
+registration_number = 1
+for i in range(10):
+    maximum_speed = random.randint(100, 200)
+    car = Car(registration_number, maximum_speed, travelled_distance)
+    car_list.append(car)
+    registration_number = registration_number + 1
 finish = False
+hour = 1
 while finish == False:
-    for new_car in car_list:
-        new_car.accelerate(random.randint(-10, 16))
-        new_car.drive(1)
-        if new_car.travelled_distance > 10000:
-            finish = True
-        print(f"registration_number ABC-{new_car.registration_number},maximum_speed: {new_car.maximum_speed}, current_speed:{new_car.current_speed}, travelled_distance:{new_car.travelled_distance}")
+    for car in car_list:
+        car.accelerate(random.randint(-10, 15))
+        car.drive(1)
+        print(f"registration_number ABC-{car.registration_number}, current_speed:{car.current_speed}, travelled_distance:{car.travelled_distance}")
+        hour = hour + 1
+        if car.travelled_distance> 10000:
+           finish = True
+print("Race is over")
 
 #Lab 10
 #1
