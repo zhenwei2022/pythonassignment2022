@@ -28,20 +28,21 @@ import json
 
 app = Flask(__name__)
 @app.route('/airport')
-def prime():
-    args = request.args
+def airport():
+    argument = request.args
     code = argument.get("code")
     cursor = connection.cursor()
-    cursor.execute(select ident, name, municipality from airport where iso_country ="code")
+    cursor.execute("SELECT ident, name, municipality FROM airport WHERE ident ='"+ code +"'")
     result = cursor.fetchall()
     for row in result:
         response = {
-            "ICAO" :code
-            "Name" : row[3]
-            "Location" : row[10]
+            "ICAO" : code,
+            "Name" : row[1],
+            "Location" : row[2]
         }
-        json.dumps(response,default = lambda 0: o.__dict__, indent =4)
+        json.dumps(response, default=lambda o: o.__dict__, indent=4)
         return response
+
 connection = mysql.connector.connect(
         host='127.0.0.1',
         port=3306,
@@ -50,7 +51,5 @@ connection = mysql.connector.connect(
         password='20220822Metropolia',
         autocommit=True
     )
-
-
 if __name__ == '__main__':
     app.run(use_reloader = True, host = '127.0.0.1', port = 5000)
