@@ -1,3 +1,5 @@
+#Lab 13
+#1
 from flask import Flask, request
 app = Flask(__name__)
 @app.route('/prime')
