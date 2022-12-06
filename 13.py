@@ -28,24 +28,19 @@ import mysql.connector
 from flask import Flask, request
 import json
 
-
 app = Flask(__name__)
-@app.route('/airport')
-def airport():
-    args = request.args
-    icao = args.get("icao")
+@app.route('/airport/<icao>')
+def airport(icao):
     cursor = connection.cursor()
     cursor.execute("SELECT name, municipality FROM airport WHERE ident ='"+ icao +"'")
     result = cursor.fetchall()
     for row in result:
         response = {
             "ICAO" : icao,
-            "Name" : row[4],
-            "Location" : row[11]
+            "Name" : row[0],
+            "Location" : row[1]
         }
-
         return response
-
 
 connection = mysql.connector.connect(
         host='127.0.0.1',
@@ -57,4 +52,4 @@ connection = mysql.connector.connect(
     )
 
 if __name__ == '__main__':
-    app.run(use_reloader = True, host = '127.0.0.1', port = 5000)
+    app.run(use_reloader=True, host='127.0.0.1', port=5000)
