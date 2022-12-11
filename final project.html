@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"/>
+    <link href="css/index.css" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" defer></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js" defer></script>
+    <script src="final project.js" defer></script>
+    <title>Journey</title>
+</head>
+<body>
+<p></p>
+<div class="container">
+     <header class="page-header">
+        <h1 class="page-title"> Fantastic Journey</h1>
+        <nav>
+            <ul class="flex-wrap space-evenly">
+                <li><a class = "button button-white" href="final project.html">Index</a></li>
+                <li><a class = "button button-white" href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="flex-wrap">
+        <div id="map">
+        </div>
+        <div class="boxes">
+            <section class="box">
+                <header>
+                    <h2> Game Status</h2>
+                </header>
+                <table>
+                    <tr>
+                        <td colspan="2">Player Name</td>
+                    </tr>
+                    <tr>
+                        <td CO2 Consumed : <span id="consulmed">0</span>kg</td>
+                        <td CO2 Budget : <span id="consulmed">10000</span>kg</td>
+                        <td current country : <span id="current-country">current country</span></td>
+                    </tr>
+                </table>
+            </section>
+            <section class="box">
+                <header>
+                    <h2 id="airport-name">Airport name</h2>
+                </header>
+                <table class="weather">
+                    <tr>
+                        <td>Temperature</td>
+                        <td>
+                             <img src="https://openweathermap.org/img/wn/09n@2x.png" alt="Goal weather icon">
+                        </td>
+                        <td>wind</td>
+                    </tr>
+                    <tr>
+                        <td id="airport-temp">10</td>
+                        <td id="airport-conditions">Cloudy</td>
+                        <td id="airport-wind">40m/s</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="box">
+                <head>
+                    <h2>Goals</h2>
+                </head>
+                <ul id="goals" class="flex-wrap">
+                    <li class="done">
+                        <figure>
+                            <img src="https://openweathermap.org/img/wn/09n@2x.png" alt="Goal weather icon">
+                            <figcaption>Temperature over +25</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="https://openweathermap.org/img/wn/09n@2x.png" alt="Goal weather icon">
+                            <figcaption>Temperature over +25</figcaption>
+                        </figure>
+                    </li>
+                   <li>
+                        <figure>
+                            <img src="https://openweathermap.org/img/wn/09n@2x.png" alt="Goal weather icon">
+                            <figcaption>Temperature over +25</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="https://openweathermap.org/img/wn/09n@2x.png" alt="Goal weather icon">
+                            <figcaption>Temperature over +25</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <p>It is good to have an end to journey toward; but it is the journey that matters, in the end.”</p>
+    </footer>
+    <div class = "goal hide">
+        <h2>Time out!!!</h2>
+        <p>
+            <span id = "goal-txt">Goals not reached!!</span>
+        </p>
+    </div>
+</div>
+<div id="player-modal" class="hide">
+    <form id="player-form">
+        <input  type="text" placeholder="Player name" required>
+        <input class="submit" value="Start Game">
+    </form>
+</div>
+</body>
+</html>
