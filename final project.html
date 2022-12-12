@@ -33,18 +33,20 @@
                 </header>
                 <table>
                     <tr>
-                        <td colspan="2">Player Name</td>
+                        <td colspan="2">
+                            <h3 id="player-name">Player Name</h3>
+                        </td>
                     </tr>
                     <tr>
-                        <td CO2 Consumed : <span id="consulmed">0</span>kg</td>
-                        <td CO2 Budget : <span id="consulmed">10000</span>kg</td>
+                        <td CO2 Consumed : <span id="consumed">0</span>kg</td>
+                        <td CO2 Budget : <span id="budget">10000</span>kg</td>
                         <td current country : <span id="current-country">current country</span></td>
                     </tr>
                 </table>
             </section>
             <section class="box">
                 <header>
-                    <h2 id="airport-name">Airport name</h2>
+                    <h2 id="airport-name">Airport Name</h2>
                 </header>
                 <table class="weather">
                     <tr>
@@ -103,9 +105,9 @@
         </p>
     </div>
 </div>
-<div id="player-modal" class="hide">
+<div id="player-modal">
     <form id="player-form">
-        <input  type="text" placeholder="Player name" required>
+        <input  id = "player-input" type="text" placeholder="Player name" required>
         <input class="submit" value="Start Game">
     </form>
 </div>
