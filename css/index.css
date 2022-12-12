@@ -32,12 +32,13 @@
     justify-content: space-evenly;
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
     color: var(--white);
     font-family: Geneva, Tahoma, san;
     background-color: var(--black);
+    scroll-behavior: smooth;
 }
 
 .page-header, .page-footer{
@@ -148,6 +149,7 @@ main{
     background-color: lightyellow;
     position: absolute;
     top:0;
+    z-index: 9999;
 }
 
 #player-form {
@@ -190,5 +192,22 @@ main{
         padding-left: 1rem;
         box-sizing: border-box;
     }
+}
+
+.blue-icon {
+    background-color: #2474ff;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.5);
+}
+
+.blue-icon {
+    background-color: #2474ff;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.5);
+}
+.green-icon {
+    background-color: #27ba35;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.5);
 }
 
